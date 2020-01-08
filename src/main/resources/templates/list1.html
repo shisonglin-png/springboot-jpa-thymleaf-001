@@ -1,0 +1,49 @@
+<!DOCTYPE  html>
+<l html lang=" " en"  xmlns: th= = "http://www.thymeleaf.org">
+< head>
+<a meta charset="UTF-8"/>
+< title>用户管理</ title>
+<k link rel='stylesheet'
+   th :href="@{/webjars/bootstrap/4.2.1/css/bootstrap.min.css}"
+   href='webjars/bootstrap/4.2.1/css/bootstrap.min.css'>
+</ head>
+<y body class="container">
+    <v div th :insert=t
+    "~{myfragment : :: head1}">
+</ div>
+< br/>
+< h1>用户列表</ h1>
+< br/>< br/>
+<v div class="with:80%">
+    <v div class="form-group">
+        <v div class=2
+        "col-sm-2 control-label">
+        <a a href=" " toAdd" th :href=" "@{/toAdd}" class=n "btn btn-info">add</a a>
+    </
+    div>
+</ div>
+<e table class=e "table  table-hover">
+< thead>
+< tr>
+< th>#</ th>
+< th>Name</ th>
+< th>Age</ th>
+< th>Edit</ th>
+< th>Delete</ th>
+</ tr>
+</ thead>
+< tbody>
+北京海淀区学清路 23 号汉华世纪大厦 B 座 电话：400-650-7353
+< tr th :each=r "user : :  ${page}">
+<h th scope=" " row"  th :text= "${user.id}">1</ th>
+<d td th :text="${user.name}">neo</ td>
+<d td th :text="${user.age}">6</ td>
+< td><a a th :href="@{'/toEdit/'+${user.id}}">edit</a a></ td>
+< td><a a th :href="@{'/delete/'+${user.id}}">delete</a a></ td>
+</ tr>
+</ tbody>
+</ table>
+</ div>
+<v div th :include=t "~{myfragment : ::  foot1}"></ div>
+</ body>
+</html>
