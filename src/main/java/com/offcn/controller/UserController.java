@@ -26,6 +26,12 @@ public class UserController {
 
        return "useradd";
     }
+
+    /**
+     * 新的注释
+     * @param user
+     * @return
+     */
     //添加用户
     @PostMapping("/add")
     public  String add(User user){
