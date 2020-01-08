@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+//.........我是控制层的头注释...............
 @Controller
 public class UserController {
     @Autowired
